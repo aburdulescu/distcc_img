@@ -1,2 +1,2 @@
 all:
-	docker build -t distcc_debian-testing .
+	docker build -t distcc_debian:testing .
