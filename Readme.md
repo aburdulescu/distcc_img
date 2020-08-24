@@ -8,7 +8,7 @@ make
 ./run.sh
 ```
 
-### For client(assuming cmake and ninja are used)
+### For client(debian+cmake+ninja)
 * install distcc
 
 `sudo apt install distcc`
