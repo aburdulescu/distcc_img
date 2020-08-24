@@ -1,2 +1,5 @@
 all:
-	docker build -t distcc_debian:testing .
+	docker build -t docker.pkg.github.com/aburdulescu/distcc_img/debian:testing .
+
+publish:
+	docker push docker.pkg.github.com/aburdulescu/distcc_img/debian:testing
