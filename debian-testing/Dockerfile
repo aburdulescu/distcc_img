@@ -1,11 +1,14 @@
-FROM debian:testing
+FROM debian:testing-slim
+
+ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && \
   apt-get install -y \
-  build-essential \
+  gcc \
   distcc \
   iproute2 \
   procps \
-  vim-tiny
+  && \
+  update-distcc-symlinks
 
-ENTRYPOINT update-distcc-symlinks && distccd --no-detach --allow-private --log-file /tmp/distccd.log
+ENTRYPOINT distccd --no-detach --allow-private --log-file /tmp/distccd.log
