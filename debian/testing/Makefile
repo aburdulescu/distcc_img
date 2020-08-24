@@ -1,5 +1,4 @@
-all:
-	docker build -t docker.pkg.github.com/aburdulescu/distcc_img/debian:testing .
+TAG=distcc_debian:testing
 
-publish:
-	docker push docker.pkg.github.com/aburdulescu/distcc_img/debian:testing
+all:
+	docker build -t $(TAG) .
