@@ -21,4 +21,4 @@ make
 
 * run build command
 
-`ninja -j 40`
+`ninja`
